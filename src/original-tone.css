@@ -1,0 +1,211 @@
+/* Original Richmarketing color hierarchy, within the approved Supanova layout.
+   The light opening stays intact; the original dark/soft/light section rhythm returns. */
+.section {
+  --red: #bc3342;
+  --gold: #88611c;
+  --sky: #82b6ff;
+}
+.section--dark:not(.hero) {
+  --ink: #f5f7fd;
+  --body: #c0cde2;
+  --muted: #98abc7;
+  --blue: #91bbff;
+  --red: #ff858b;
+  --gold: #f0d58f;
+  --line: #2b3d59;
+  --soft: #12233d;
+  color: var(--ink);
+  background: #081429;
+}
+.section--soft {
+  background: #f1f5fc;
+}
+.section--light {
+  background: #fff;
+}
+.section .text-red { color: var(--red); }
+.section .text-gold { color: var(--gold); }
+.section .text-blue { color: var(--blue); }
+.section .text-shimmer--silver { color: #e5ecfa; }
+.section .text-accent {
+  text-decoration-line: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: .22em;
+  text-decoration-color: color-mix(in srgb, currentColor 45%, transparent);
+  text-decoration-skip-ink: auto;
+}
+
+/* Low, stationary pools of light separate the sections without obscuring type. */
+.section--dark:not(.hero)::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(ellipse 65% 70% at 50% 0%, rgb(43 103 205 / 16%), transparent 80%);
+}
+.section--dark:not(.hero) + .section--dark {
+  border-top: 1px solid rgb(130 165 220 / 12%);
+}
+.section--dark .section-index { color: #8faee0; }
+.section--dark .section-title { text-shadow: 0 4px 24px rgb(0 8 27 / 16%); }
+.section--dark .legal-note { color: #a1b3cc; }
+.section--dark:not(.hero) .consult-link {
+  background: #316bea;
+  border-color: #5d8ff1;
+  color: #fff;
+  box-shadow: 0 12px 30px rgb(27 76 175 / 25%), inset 0 1px 0 rgb(255 255 255 / 16%);
+}
+.section--dark:not(.hero) .consult-link:hover {
+  background: #417cf6;
+  border-color: #92b7ff;
+  box-shadow: 0 16px 36px rgb(40 97 211 / 36%);
+}
+.section--dark:not(.hero) .consult-link .cta-arrow { background: rgb(255 255 255 / 12%); }
+
+.solution.section--dark { background: #0b1930; }
+.solution::before {
+  background: radial-gradient(ellipse 60% 65% at 28% 10%, rgb(57 119 231 / 20%), transparent 85%) !important;
+}
+.solution__title > span { color: #e0e8f8; }
+.solution .carousel__card {
+  border-color: #3f5578;
+  box-shadow: 0 16px 36px rgb(0 7 24 / 22%);
+}
+.solution .carousel__card.is-center {
+  border-color: #a3c8ff;
+  box-shadow: 0 0 0 1px rgb(163 200 255 / 25%), 0 16px 40px rgb(0 6 22 / 30%);
+}
+
+/* Bright explanatory sections use blue edges and the original consumer emphasis dots. */
+.reaction-card { border-color: #dce6f7; box-shadow: 0 10px 30px rgb(29 68 135 / 4%); }
+.reaction-card:nth-child(2), .reaction-card:nth-child(3) { background: #eff5ff; }
+.reaction-card__number { color: #5e7fad; }
+.consumer-dots { display: inline-flex; }
+.consumer-dots > span { position: relative; }
+.consumer-dots > span::before {
+  content: '';
+  position: absolute;
+  width: .1em;
+  height: .1em;
+  left: 50%;
+  top: -.09em;
+  border-radius: 50%;
+  background: var(--blue);
+  transform: translateX(-50%);
+}
+.consumer-dots.is-highlighted > span::before { animation: emphasis-arrive 750ms both; }
+.consumer-dots.is-highlighted > span:nth-child(2)::before { animation-delay: 140ms; }
+.consumer-dots.is-highlighted > span:nth-child(3)::before { animation-delay: 280ms; }
+@keyframes emphasis-arrive {
+  from { opacity: 0; transform: translate(-50%, -5px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
+.perception-card { border-color: #dae4f4; box-shadow: 0 12px 32px rgb(24 63 131 / 6%); }
+.perception-card__label { color: #225cbd; font-weight: 600; }
+.perception-card h3 em {
+  background: #edf3ff;
+  box-shadow: 5px 0 #edf3ff, -5px 0 #edf3ff;
+  border-radius: 3px;
+}
+
+/* Consultation panels retain calm, legible surfaces inside the navy section. */
+.consult.section--dark { background: #0a1830; }
+.consult::before {
+  background: radial-gradient(ellipse 65% 85% at 85% 45%, rgb(49 111 224 / 16%), transparent 80%) !important;
+}
+.consult-steps li { background: #142641; border-color: #334e75; box-shadow: inset 0 1px 0 rgb(186 213 255 / 5%); }
+.consult-steps strong { color: #f1f6ff; }
+.consult-steps span { color: #9cc4ff; }
+.consult-benefits { border-color: #304461; }
+.consult-benefits li + li { border-color: #304461; }
+
+/* Original gold price hierarchy and a quiet warm edge on the recommended bundle. */
+.pricing.section--dark { background: #080f1e; }
+.pricing::before {
+  background: radial-gradient(ellipse 70% 60% at 70% 70%, rgb(127 99 44 / 10%), transparent 85%) !important;
+}
+.pricing-card {
+  position: relative;
+  color: #f5f7fd;
+  background: #152238;
+  border-color: #34445d;
+  box-shadow: 0 16px 36px rgb(0 5 18 / 15%);
+}
+.pricing-card__label { background: #222f44; color: #b9c9e1; }
+.pricing-card__price { color: var(--gold); }
+.pricing-card__price small { color: #c9c4b9; }
+.pricing-card__total { color: #bdc9dd; }
+.pricing-card__footer { border-color: #394456; }
+.pricing-card--recommended {
+  background: linear-gradient(145deg, #242b35, #1b2535);
+  border-color: #b49a60;
+  box-shadow: inset 0 3px 0 #d2b674, 0 20px 45px rgb(135 102 37 / 12%);
+}
+.pricing-card--recommended .pricing-card__label { background: #423c30; color: #f0d58f; }
+.pricing-card--recommended .pricing-card__total { color: #f6ebcf; }
+.pricing__kicker { color: var(--red); }
+.expertise.section--dark { background: #0c1a32; }
+.expertise__icon { background: #1a3152; box-shadow: 0 0 30px rgb(73 128 223 / 12%); }
+.expertise h2 { text-shadow: 0 4px 32px rgb(82 144 250 / 12%); }
+
+/* As in the original: dark process cards on the pale explanatory canvas. */
+.process-step { background: #142239; color: #f3f7fe; border-color: #2c4262; box-shadow: 0 12px 28px rgb(13 35 71 / 9%); }
+.process-number { color: #a4cbff; background: #263e60; }
+.process-examples, .process-chain { color: #c6d2e5; }
+.process-step .text-blue, .process-key { color: #99c2ff; }
+.patent-examples { color: #b1c2dc; }
+.process-note { color: #a9bad3; }
+.problem.section--dark { background: #091427; }
+.problem__conclusion { border-color: #2c4262; }
+
+.deliverables.section--light { background: #fff; }
+.book-showcase { border-color: #dce6f6; box-shadow: 0 20px 45px rgb(30 69 131 / 7%); }
+.deliverables__uses li { padding-left: 14px; border-left: 2px solid #cadcfb; }
+.examples.section--dark { background: #0a172b; }
+.examples::before {
+  background: radial-gradient(ellipse 75% 60% at 60% 75%, rgb(141 108 46 / 11%), transparent 80%), radial-gradient(ellipse 50% 40% at 15% 0%, rgb(58 116 220 / 14%), transparent 85%) !important;
+}
+.example-card { background: #14253d; border-color: #354b6c; box-shadow: 0 16px 32px rgb(0 6 22 / 16%); }
+.example-card figcaption { color: #e3edfc; }
+.results.section--soft { background: radial-gradient(ellipse at 50% 15%, #eaf1ff, #f3f6fc 65%); }
+.results-board { border-color: #c9daf5; box-shadow: 0 18px 42px rgb(39 87 165 / 8%); }
+.results blockquote em { color: #1559eb; }
+.results-chips li { background: #fff; border-color: #cdddf6; box-shadow: 0 4px 10px rgb(27 70 139 / 3%); }
+.value-card { background: #f1f5fc; border-color: #d8e4f6; box-shadow: 0 12px 30px rgb(27 65 127 / 4%); }
+.value-card p em { font-weight: 650; }
+.final-cta.section--dark { background: #08162d; }
+.final-cta::before {
+  background: radial-gradient(ellipse 70% 85% at 50% 65%, rgb(49 110 221 / 23%), transparent 82%) !important;
+}
+.final-cta__icon { background: #18345c; border-color: #476ba4; box-shadow: 0 0 34px rgb(64 127 238 / 14%); }
+
+/* A single light pass on original emphasis spans, triggered when they enter view.
+   No continuous pulsing, and no transparent text when reduced motion is enabled. */
+@supports ((background-clip: text) or (-webkit-background-clip: text)) {
+  .text-shimmer.is-highlighted {
+    background-image: linear-gradient(110deg, currentColor 0%, currentColor 42%, #f8fbff 50%, currentColor 58%, currentColor 100%);
+    background-size: 300% 100%;
+    background-position: 0% 0;
+    background-repeat: no-repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: original-light-pass 2200ms ease-out both;
+  }
+  .text-shimmer--light.is-highlighted {
+    background-image: linear-gradient(110deg, currentColor 0%, currentColor 42%, #709ce7 50%, currentColor 58%, currentColor 100%);
+  }
+}
+@keyframes original-light-pass {
+  from { background-position: 100% 0; }
+  to { background-position: 0% 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .text-shimmer.is-highlighted {
+    background-image: none;
+    -webkit-text-fill-color: currentColor;
+    animation: none;
+  }
+  .consumer-dots.is-highlighted > span::before { animation: none; }
+}

@@ -1,0 +1,180 @@
+/* User's annotated PDF: clearer type, consultation panels and pricing.
+   Keep the approved blue/navy/gold palette and compact mobile comparisons. */
+
+/* Paired branding: scalable Rich Marketing mark and the full-resolution Lawmun logo. */
+.site-header {
+  width: min(1200px, calc(100% - 64px));
+  gap: 24px;
+  padding: 12px 18px 12px 24px;
+  background: #fff;
+}
+.brand { gap: 0; }
+.brand-lockup__rich { display: flex; flex-direction: column; gap: 5px; }
+.brand-lockup__wordmark { display: flex; align-items: center; gap: 6px; }
+.brand .brand-lockup__wordmark strong {
+  font-size: 23px;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -.045em;
+  white-space: nowrap;
+}
+.brand-lockup__symbol { display: block; width: 21px; height: 28px; flex: none; }
+.brand-lockup__tagline { font-size: 9.5px; line-height: 1.4; font-weight: 600; letter-spacing: .025em; color: #5875a3; white-space: nowrap; }
+.brand-lockup__divider { width: 1px; height: 46px; background: #d9e2f1; margin-inline: 20px; }
+.brand-lockup__lawmun { width: 180px; height: auto; filter: invert(1); mix-blend-mode: multiply; }
+
+/* PDF pages 1–7: make the opening argument and perception change easier to scan. */
+.trust-strip > p { color: #4e5e76; font-size: 18px; line-height: 1.6; font-weight: 700; }
+.trust-strip ul { gap: 36px; }
+.trust-strip li { font-size: 18px; line-height: 1.6; font-weight: 700; }
+.trust-strip li span { flex: none; width: 28px; height: 28px; font-size: 15px; }
+.hero-context h2 { font-size: 32px; line-height: 1.55; font-weight: 750; }
+.hero-context__topics { display: block; margin-bottom: 10px; font-size: .87em; line-height: 1.6; letter-spacing: -.045em; }
+.hero-context__topics > span { display: block; white-space: nowrap; }
+.hero-conclusion { font-size: 22px; font-weight: 650; color: #4c5c73; }
+.hero-conclusion strong { font-size: 34px; font-weight: 800; }
+.solution__title strong { font-size: 60px; line-height: 1.24; font-weight: 800; letter-spacing: -.045em; color: #b1d0ff; }
+.solution__title > span { font-size: 32px; font-weight: 700; }
+.perception-card__label { font-size: 20px; line-height: 1.55; font-weight: 800; color: #1d55b0; letter-spacing: -.03em; }
+.perception__conclusion { max-width: 900px; font-size: 25px; line-height: 1.85; font-weight: 700; color: #34435b; }
+.perception__conclusion em { font-weight: 800; }
+
+/* PDF pages 8–9: light step panels and bright, prominent service benefits. */
+.consult-steps li {
+  min-height: 112px;
+  background: #f0f5ff;
+  border-color: #b9d0f5;
+  box-shadow: 0 8px 24px rgb(0 7 24 / 13%), inset 0 1px 0 #fff;
+}
+.consult-steps span {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 13px;
+  color: #fff;
+  background: #245fd8;
+  font-size: 15px;
+  font-weight: 750;
+}
+.consult-steps strong { font-size: 24px; line-height: 1.45; font-weight: 800; color: #10274a; letter-spacing: -.025em; }
+.consult-benefits { padding-block: 30px; border-color: #425775; }
+.consult-benefits li { font-size: 19px; line-height: 1.6; font-weight: 750; color: #fff; }
+.consult-benefits li + li { border-color: #425775; }
+
+/* PDF page 10: aligned prices, a distinct total row and restrained gold recommendation. */
+.pricing-card { gap: 24px; padding: 36px 40px; border-radius: 28px; background: linear-gradient(155deg, #1a2c46, #101d31); border-color: #3e5576; }
+.pricing-card__topline { display: flex; justify-content: space-between; align-items: center; gap: 12px; width: 100%; }
+.pricing-card__label { font-size: 13px; font-weight: 700; line-height: 22px; padding: 5px 13px; background: #293d5b; color: #d5e4ff; }
+.pricing-card__icon { width: 32px; height: 32px; flex: none; color: #9cbbeb; }
+.pricing-card__title { font-size: 26px; font-weight: 750; letter-spacing: -.03em; word-break: keep-all; }
+.pricing-card__amount { display: flex; flex-direction: column; gap: 10px; margin-block: 6px 8px; }
+.pricing-card__price { display: flex; flex-direction: row; align-items: baseline; gap: 8px; font-size: 72px; font-weight: 800; line-height: 1.05; letter-spacing: -.055em; font-variant-numeric: tabular-nums; color: #f5f8ff; }
+.pricing-card__unit { font-size: 28px; font-weight: 650; letter-spacing: -.045em; }
+.pricing-card__basis { font-size: 15px; line-height: 1.6; color: #bccce3; }
+.pricing-card__footer { display: flex; justify-content: space-between; align-items: center; gap: 12px; width: 100%; margin-top: auto; padding-top: 24px; border-color: #3d516f; }
+.pricing-card__summary { font-size: 14px; line-height: 1.5; color: #a9bfdc; }
+.pricing-card__total { font-size: 20px; line-height: 1.4; font-weight: 750; color: #e0eaff; }
+.pricing-card--recommended { background: linear-gradient(145deg, #35322b, #232a36 72%); border-color: #c5aa6d; box-shadow: inset 0 3px 0 #e2c486, 0 20px 45px rgb(135 102 37 / 12%); }
+.pricing-card--recommended .pricing-card__label { background: #514632; color: #ffe3a6; }
+.pricing-card--recommended .pricing-card__icon { color: #e5c98a; }
+.pricing-card--recommended .pricing-card__price { color: #f8d997; }
+.pricing-card--recommended .pricing-card__basis,
+.pricing-card--recommended .pricing-card__summary { color: #d6c9ad; }
+.pricing-card--recommended .pricing-card__footer { border-color: #675e4c; }
+.pricing-card--recommended .pricing-card__total { color: #ffe6b4; }
+
+/* The separately attached quote: bold throughout, including the supporting line. */
+.results blockquote { font-weight: 800; }
+.results__closing { font-size: 22px; font-weight: 750; color: #374b6b; }
+.results blockquote em, .results__closing em { font-weight: 800; }
+
+@media (max-width: 1100px) {
+  .site-header > .consult-link { display: none; }
+  .trust-strip ul { gap: 24px; }
+  .trust-strip li { font-size: 16px; }
+  .solution__title strong { font-size: 52px; }
+  .consult-steps strong { font-size: 22px; }
+}
+@media (max-width: 900px) {
+  .site-header { width: calc(100% - 40px); gap: 18px; }
+  .brand .brand-lockup__wordmark strong { font-size: 21px; }
+  .brand-lockup__lawmun { width: 160px; }
+  .brand-lockup__divider { margin-inline: 18px; }
+  .hero-context h2 { font-size: 34px; }
+  .hero-conclusion { font-size: 20px; }
+  .perception-card__label { font-size: 18px; }
+  .consult-steps li { padding: 24px 20px; gap: 16px; }
+  .consult-steps strong { font-size: 20px; }
+  .pricing-card { padding: 30px; }
+  .pricing-card__price { font-size: 62px; }
+}
+@media (max-width: 700px) {
+  .trust-strip ul { flex-direction: column; align-items: center; gap: 16px; }
+  .trust-strip > p { font-size: 16px; }
+}
+@media (max-width: 600px) {
+  .site-header { width: calc(100% - 32px); padding: 10px 12px; gap: 8px; }
+  .brand-lockup__rich { gap: 4px; }
+  .brand-lockup__wordmark { gap: 4px; }
+  .brand .brand-lockup__wordmark strong { font-size: 14px; }
+  .brand-lockup__symbol { width: 14px; height: 20px; }
+  .brand-lockup__tagline { font-size: 7.2px; letter-spacing: 0; }
+  .brand-lockup__divider { height: 36px; margin-inline: 10px; }
+  .brand-lockup__lawmun { width: 106px; }
+  .nav-toggle { width: 36px; height: 36px; padding: 8px; flex: none; }
+  .trust-strip { padding-block: 30px; }
+  .trust-strip > p { font-size: 15px; }
+  .trust-strip li { font-size: 16px; }
+  .trust-strip li span { width: 24px; height: 24px; font-size: 13px; }
+  .hero-context h2 { font-size: 28px; }
+  .hero-context__topics { font-size: 24px; line-height: 1.6; }
+  .hero-conclusion { font-size: 18px; line-height: 1.8; }
+  .hero-conclusion strong { display: inline-block; margin-top: 8px; font-size: 27px; line-height: 1.5; }
+  .solution__title strong { font-size: clamp(36px, 10vw, 48px); white-space: normal; }
+  .solution__title > span { font-size: 26px; }
+  .perception-card__label { font-size: 18px; }
+  .perception__conclusion { font-size: 20px; line-height: 1.85; }
+  .consult-steps li { min-height: 92px; padding: 22px; gap: 18px; }
+  .consult-steps strong { font-size: 21px; }
+  .consult-benefits { padding-block: 26px; gap: 22px 0; }
+  .consult-benefits li { padding-inline: 8px; font-size: 16px; }
+  .pricing-card { gap: 20px; padding: 24px 18px; border-radius: 24px; }
+  .pricing-card__topline { gap: 4px; }
+  .pricing-card__label { font-size: 11px; line-height: 19px; padding: 4px 9px; white-space: nowrap; }
+  .pricing-card__icon { width: 22px; height: 26px; }
+  .pricing-card__title { font-size: 21px; line-height: 1.4; min-height: 59px; }
+  .pricing-card__amount { gap: 10px; margin-block: 0 2px; }
+  .pricing-card__price { font-size: 46px; gap: 5px; }
+  .pricing-card__unit { font-size: 19px; }
+  .pricing-card__basis { font-size: 12px; }
+  .pricing-card__footer { flex-direction: column; align-items: flex-start; gap: 7px; padding-top: 18px; }
+  .pricing-card__summary { font-size: 11px; }
+  .pricing-card__total { font-size: 18px; }
+  .results__closing { font-size: 18px; }
+}
+@media (max-width: 359px) {
+  .site-header { padding-inline: 9px; gap: 4px; }
+  .brand .brand-lockup__wordmark strong { font-size: 12.5px; }
+  .brand-lockup__symbol { width: 12px; height: 18px; }
+  .brand-lockup__tagline { font-size: 6.3px; }
+  .brand-lockup__divider { margin-inline: 8px; height: 30px; }
+  .brand-lockup__lawmun { width: 91px; }
+  .nav-toggle { width: 32px; height: 32px; padding: 6px; }
+  .hero-context__topics { font-size: 21px; }
+  .hero-conclusion strong { font-size: 24px; }
+  .perception-card__label { font-size: 17px; }
+  .perception__conclusion { font-size: 18px; }
+  .consult-steps li { padding: 20px; gap: 14px; }
+  .consult-steps span { width: 38px; height: 38px; }
+  .consult-steps strong { font-size: 18px; }
+  .pricing-card { padding-inline: 12px; }
+  .pricing-card__label { padding-inline: 7px; font-size: 10px; }
+  .pricing-card__icon { width: 18px; }
+  .pricing-card__title { font-size: 19px; }
+  .pricing-card__price { font-size: 40px; gap: 3px; }
+  .pricing-card__unit { font-size: 16px; }
+  .pricing-card__basis { font-size: 11px; }
+  .pricing-card__total { font-size: 16px; }
+}

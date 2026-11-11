@@ -1,0 +1,24 @@
+/* Keep the approved hero type, gradient and spacing across all three messages. */
+.hero-copy { display: grid; width: 100%; min-width: 0; }
+.hero-copy__slide {
+  grid-area: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  visibility: hidden;
+  pointer-events: none;
+  min-width: 0;
+}
+.hero-title { word-break: keep-all; text-wrap: balance; }
+.hero-copy__slide.is-active { visibility: visible; pointer-events: auto; animation: hero-copy-arrive 650ms var(--ease) both; }
+.hero-copy .hero__sub { max-width: 740px; }
+@keyframes hero-copy-arrive {
+  from { opacity: 0; transform: translateX(22px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@media (max-width: 600px) {
+  .hero-copy .hero__sub { max-width: 360px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-copy__slide.is-active { animation: none; }
+}

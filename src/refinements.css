@@ -1,0 +1,311 @@
+/* Rich Marketing: editorial polish, preserving the existing content and layout.
+ * Informed by Unslop, Damir Sokolovsky (@heydamir), CC BY 4.0.
+ * https://heydamir.design/unslop
+ */
+:root { --ease: cubic-bezier(0.22, 1, 0.36, 1); --text: #192231; --secondary: #525e70; color: var(--text); background: var(--ink); }
+strong { font-weight: 600; }
+.section--dark { --text: #f0f3f8; --secondary: #bcc5d3; --muted: #9aa7bb; --border: #29313f; color: var(--text); }
+.section--dark + .section--dark { border-top: 1px solid var(--border); }
+.section__inner { padding-block: 96px; gap: 32px; }
+.section-title, .consult .section-title, .pricing .section-title, .process .section-title, .problem .section-title, .deliverables .section-title, .examples .section-title, .eligibility .section-title { font-size: 44px; font-weight: 500; line-height: 1.4; letter-spacing: -0.02em; }
+.eyebrow, .perception .eyebrow, .process .eyebrow { font-size: 16px; line-height: 24px; font-weight: 500; letter-spacing: 0; }
+.section .text-red, .section .text-gold { color: var(--text); }
+.text-accent { text-decoration: none; }
+.legal-note { font-size: 13px; line-height: 1.8; }
+:focus-visible { outline: 2px solid var(--blue); outline-offset: 6px; }
+.section--dark :focus-visible, .site-footer :focus-visible { outline-color: var(--sky); }
+
+/* One type hierarchy, with quiet navigation and a clear primary action. */
+.hero .section__inner { padding-top: 24px; padding-bottom: 80px; gap: 24px; }
+.site-header { min-height: 72px; padding-bottom: 24px; gap: 24px; border-bottom: 1px solid var(--border); }
+.brand { gap: 4px; }
+.brand strong { font-size: 22px; font-weight: 600; line-height: 28px; }
+.brand span { font-size: 12px; line-height: 20px; color: var(--muted); letter-spacing: 0; }
+.consult-link { width: min(360px, 100%); min-height: 72px; padding: 12px 24px; gap: 4px; border-radius: 8px; font-size: 20px; line-height: 28px; font-weight: 500; transition: background-color 160ms var(--ease), border-color 160ms var(--ease), transform 160ms var(--ease); }
+.consult-link small { font-size: 13px; line-height: 20px; font-weight: 400; }
+.consult-link:hover { background: #194bb9; border-color: transparent; }
+.consult-link:active { transform: scale(0.98); }
+.consult-link--light { background: #f0f3f8; color: var(--ink); }
+.consult-link--light:hover { background: #dce5f3; }
+.consult-link--compact { width: auto; min-height: 44px; padding: 12px 20px; font-size: 14px; line-height: 20px; background: transparent; border-color: #535f73; color: #f0f3f8; }
+.consult-link--compact:hover { background: var(--navy); border-color: var(--sky); }
+.hero__kicker { margin-top: 32px; font-size: 18px; line-height: 28px; color: var(--secondary); letter-spacing: 0; }
+.hero h1 { min-height: 0; font-size: 72px; font-weight: 500; line-height: 1.16; letter-spacing: -0.03em; }
+.hero__sub { font-size: 22px; line-height: 32px; color: var(--secondary); font-weight: 400; letter-spacing: 0; }
+.hero .carousel { margin-top: 16px; }
+.hero__message { margin-top: 16px; font-size: 22px; line-height: 1.65; color: var(--secondary); }
+.hero__message p + p { margin-top: 32px; }
+.hero__message strong { font-weight: 500; }
+.hero__difference { display: inline-block; margin-top: 12px; color: var(--text) !important; font-size: 1.12em; text-decoration: underline; text-decoration-color: var(--sky); text-decoration-thickness: 1px; text-underline-offset: 8px; }
+
+/* Original images provide the color. Frames and labels recede. */
+.carousel { clip-path: inset(-12px 0 -12px); }
+.carousel__viewport { height: 280px; }
+.carousel__card { padding: 8px 8px 16px; gap: 12px; border-color: #364152; }
+.carousel__card.is-center { border-color: #65748b; }
+.carousel__image { border: 0; border-radius: 8px; }
+.carousel__card figcaption { font-size: 16px; line-height: 24px; font-weight: 500; }
+.carousel--patent .carousel__viewport { height: 416px; }
+.carousel--patent .carousel__card, .carousel--patent .carousel__card.is-center { padding: 0; border: 1px solid #364152; border-radius: 12px; }
+.carousel--patent .carousel__card.is-center { border-color: #65748b; }
+.carousel--patent .carousel__image { border-radius: 11px; }
+.carousel--patent .carousel__image img { object-fit: contain; }
+.solution__intro { display: flex; flex-direction: column; gap: 8px; font-size: 24px; font-weight: 400; line-height: 1.6; color: var(--secondary); }
+.solution__appeal { display: block; margin-top: 8px; font-size: 1.2em; font-weight: 500; }
+.solution__title { min-height: 0; font-weight: 500; line-height: 1.4; }
+.solution__title strong { font-size: 60px; font-weight: 500; letter-spacing: -0.03em; }
+.solution__title > span { margin-top: 12px; font-size: 28px; font-weight: 400; color: var(--secondary); }
+.solution__caption { font-size: 24px; line-height: 1.6; font-weight: 400; }
+
+/* Comparisons and steps share spacing, radii and tabular numbering. */
+.reaction-grid, .perception-grid { gap: 24px; }
+.reaction-card { min-height: 0; padding: 32px; gap: 16px; border-radius: 16px; }
+.reaction-card__icon { width: 28px; height: 28px; filter: grayscale(1); opacity: 0.75; }
+.reaction-card__number { right: 32px; top: 32px; font-size: 13px; line-height: 20px; color: var(--muted); font-weight: 400; }
+.reaction-card__number, .process-number, .consult-steps span, .pricing-card__price, .eligibility-types span { font-variant-numeric: tabular-nums; }
+.reaction-card h3 { font-size: 24px; font-weight: 500; line-height: 1.5; }
+.reaction-card em { color: var(--text); font-weight: 600; }
+.reaction-card p { font-size: 17px; font-weight: 400; line-height: 1.65; color: var(--secondary); }
+.perception-card { padding: 32px; gap: 20px; border-radius: 16px; }
+.perception-card__heading { padding-bottom: 16px; border-bottom: 1px solid var(--border); }
+.perception .perception-card__label { padding: 0; background: transparent; border-radius: 0; color: var(--blue); font-size: 16px; line-height: 24px; font-weight: 500; text-align: left; }
+.perception-card__before { min-height: 0; font-size: 17px; line-height: 1.6; font-weight: 400; }
+.perception-card h3 { font-size: 24px; font-weight: 500; line-height: 1.5; }
+.perception__conclusion { font-size: 18px; line-height: 1.7; font-weight: 400; color: var(--secondary); }
+.perception__keyline em { font-size: 24px; font-weight: 500; }
+.consult__intro { font-size: 22px; line-height: 1.7; font-weight: 400; color: var(--secondary); }
+.consult-steps { text-align: left; }
+.consult-steps li { padding: 24px; gap: 12px; min-height: 0; border-color: var(--border); border-radius: 12px; background: var(--navy); }
+.consult-steps span { color: var(--sky); font-size: 13px; line-height: 20px; font-weight: 400; }
+.consult-steps strong { font-size: 20px; line-height: 28px; font-weight: 500; }
+.consult__no-idea { font-size: 20px; line-height: 32px; font-weight: 500; }
+.consult-benefits { gap: 0; }
+.consult-benefits li { min-height: 0; padding: 8px 16px; border: 0; border-radius: 0; background: transparent; color: var(--secondary); font-size: 15px; font-weight: 400; line-height: 24px; }
+.consult-benefits li + li { border-left: 1px solid var(--border); }
+.consult__available { color: var(--secondary); line-height: 1.7; }
+.consult-note { margin-top: -16px; font-size: 13px; color: var(--muted); }
+.pricing__kicker { color: var(--secondary) !important; font-size: 16px; font-weight: 400; line-height: 28px; }
+.pricing-grid { gap: 24px; margin-block: 8px; }
+.pricing-card { padding: 32px; gap: 20px; border-color: var(--border); border-radius: 16px; background: var(--navy); transition: none; }
+.pricing-card__label { padding: 0; border: 0; border-radius: 0; background: none; color: var(--muted); font-size: 13px; font-weight: 400; line-height: 20px; }
+.pricing-card__title { font-size: 24px; font-weight: 500; line-height: 1.4; letter-spacing: 0; }
+.pricing-card__price { margin-top: 8px; color: var(--text); font-size: 48px; font-weight: 500; letter-spacing: -0.03em; }
+.pricing-card__price small { color: var(--secondary); font-size: 24px; font-weight: 400; letter-spacing: 0; }
+.pricing-card__footer { margin-top: 8px; padding-top: 20px; border-color: var(--border); }
+.pricing-card__total { color: var(--secondary); font-size: 15px; font-weight: 400; line-height: 24px; }
+.pricing-card--recommended { border-color: var(--sky); }
+.pricing-card--recommended .pricing-card__label { color: var(--sky); background: none; }
+.pricing__description { color: var(--secondary); font-size: 18px; font-weight: 400; line-height: 1.7; }
+.pricing .legal-note { color: var(--muted); }
+.expertise .section__inner { gap: 24px; }
+.expertise__icon { width: 48px; height: 48px; }
+.expertise p { color: var(--secondary); font-size: 20px; line-height: 32px; letter-spacing: 0; }
+.expertise h2 { font-size: 44px; font-weight: 500; line-height: 1.4; letter-spacing: -0.02em; }
+.expertise .expertise__closing { color: var(--text); font-size: 28px; font-weight: 400; line-height: 40px; }
+.process { background: var(--soft); }
+.process-list { gap: 20px; }
+.process-list::before { left: 56px; top: 48px; bottom: 48px; width: 1px; background: #c9d0db; }
+.process-step { padding: 32px; gap: 24px; background: var(--ink); border-color: #29313f; color: #f0f3f8; }
+.process-number { background: var(--navy); border-color: #364152; border-radius: 8px; font-size: 14px; font-weight: 500; }
+.process-step h3 { margin-bottom: 12px; font-size: 22px; font-weight: 500; line-height: 32px; }
+.process-examples { color: #bcc5d3; font-size: 18px; font-weight: 400; line-height: 1.7; }
+.process-examples small { font-size: 14px; }
+.process-chain { font-size: 20px; font-weight: 500; line-height: 1.6; }
+.patent-examples { margin-top: 16px; color: #bcc5d3; font-size: 16px; font-weight: 400; line-height: 1.7; letter-spacing: 0; }
+.patent-examples li + li { margin-top: 8px; }
+.process-key { font-size: 20px; font-weight: 400; line-height: 1.6; }
+.process-note { margin-top: 12px; color: #9aa7bb; font-size: 13px; line-height: 24px; }
+.problem__description { font-size: 20px; font-weight: 400; line-height: 1.8; color: var(--secondary); }
+.problem__conclusion { padding: 32px; min-height: 0; border-color: var(--border); }
+.problem__conclusion p { margin-bottom: 16px; font-size: 18px; font-weight: 400; line-height: 28px; color: var(--secondary); }
+.problem__conclusion strong { font-size: 28px; font-weight: 500; line-height: 1.6; }
+
+/* Actual documents and results remain the visual focus. */
+.deliverables-grid { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 64px; }
+.deliverables__copy { gap: 24px; }
+.deliverables__copy h3 { font-size: 26px; font-weight: 500; line-height: 1.6; letter-spacing: 0; }
+.deliverables__copy > p { font-size: 18px; font-weight: 400; line-height: 1.7; color: var(--secondary); }
+.deliverables__uses { gap: 0; }
+.deliverables__uses li { min-height: 0; padding: 16px 0; border: 0; border-top: 1px solid var(--border); border-radius: 0; background: transparent; font-size: 15px; font-weight: 400; line-height: 24px; }
+.book-showcase { min-width: 0; width: 100%; }
+.book-showcase__pages { position: relative; width: 100%; aspect-ratio: 4 / 5; }
+.book-showcase__page { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding: 8px; overflow: hidden; border: 1px solid var(--border); border-radius: 12px; background: var(--soft); }
+.book-showcase__page img { width: 100%; height: 100%; object-fit: contain; }
+.book-showcase__turning { pointer-events: none; animation: page-leave 180ms var(--ease) forwards; }
+@keyframes page-leave { from { opacity: 1; } to { opacity: 0; } }
+.book-showcase__controls { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 12px; margin-top: 16px; }
+.book-showcase__controls button { min-height: 44px; padding: 12px 16px; border: 1px solid var(--blue); border-radius: 8px; background: var(--blue); color: #fff; font-size: 14px; font-weight: 500; line-height: 20px; transition: background-color 160ms var(--ease), border-color 160ms var(--ease); }
+.book-showcase__controls button:hover:not(:disabled) { background: #194bb9; border-color: #194bb9; }
+.book-showcase__controls button:first-child:not(:last-child) { background: #fff; border-color: var(--border); color: var(--secondary); }
+.book-showcase__controls button:first-child:not(:last-child):hover { background: var(--soft); border-color: #98a4b7; }
+.book-showcase__controls button:disabled { background: var(--soft); border-color: var(--border); color: var(--muted); cursor: default; }
+.book-showcase__dots { display: flex; justify-content: center; gap: 8px; padding-top: 16px; }
+.book-showcase__dots span { width: 4px; height: 4px; border-radius: 50%; background: #a9b3c2; }
+.book-showcase__dots .is-active { background: var(--blue); }
+.examples__description { color: var(--secondary); font-size: 22px; line-height: 1.7; font-weight: 400; }
+.examples__description p + p { margin-top: 24px; }
+.examples-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; }
+.example-card { padding: 8px 8px 16px; border-color: var(--border); border-radius: 16px; }
+.example-card > div { height: auto; aspect-ratio: auto; border: 0; border-radius: 8px; }
+.example-card img { height: auto; object-fit: contain; }
+.example-card figcaption { color: var(--secondary); font-size: 15px; font-weight: 400; line-height: 24px; }
+.results__title { min-height: 0; font-weight: 500; }
+.results__title > span { font-size: 32px; line-height: 1.6; }
+.results__title > span:first-child { margin-bottom: 12px; color: var(--secondary); font-size: 18px; font-weight: 400; line-height: 28px; }
+.results__title em { margin-top: 12px; font-size: 52px; line-height: 1.3; letter-spacing: -0.02em; }
+.results-board { border-color: var(--border); background: #fff; }
+.results__note { margin-top: -16px; font-size: 12px; line-height: 20px; }
+.results blockquote { font-size: 28px; font-weight: 500; line-height: 1.6; }
+.results__closing { color: var(--secondary); font-size: 22px; font-weight: 400; line-height: 32px; }
+.results-chips { gap: 0; }
+.results-chips li { width: auto; padding: 0 24px; border: 0; border-radius: 0; background: transparent; color: var(--secondary); font-size: 15px; font-weight: 400; line-height: 24px; }
+.results-chips li + li { border-left: 1px solid var(--border); }
+.eligibility-types li { min-height: 72px; padding: 20px; gap: 16px; }
+.eligibility-types span { color: var(--muted); width: auto; font-weight: 400; }
+.eligibility-types strong { font-size: 20px; font-weight: 500; }
+.value-card { padding: 40px; gap: 24px; min-height: 0; border: 1px solid var(--border); border-radius: 16px; }
+.value-card h3 { font-size: 28px; font-weight: 500; line-height: 1.5; }
+.value-card p { color: var(--secondary); font-weight: 400; line-height: 1.7; }
+.final-cta__icon { width: 56px; height: 56px; border-color: var(--border); border-radius: 12px; }
+.final-cta__icon img { width: 28px; height: 28px; }
+.final-cta .section-title { font-size: 40px; font-weight: 500; line-height: 1.4; }
+.final-cta__description { color: var(--secondary); font-size: 22px; font-weight: 400; }
+.final-cta .consult-note { color: var(--muted); }
+.site-footer { padding-block: 48px; border-color: #29313f; color: #9aa7bb; line-height: 24px; }
+.site-footer .container { gap: 20px; }
+.footer-logo { width: 280px; height: 56px; }
+.footer-offices strong { margin-bottom: 8px; font-size: 15px; font-weight: 500; }
+.footer-copyright { font-size: 12px; }
+
+@media (max-width: 900px) {
+  .section__inner { padding-block: 80px; }
+  .section-title, .consult .section-title, .pricing .section-title, .process .section-title, .problem .section-title, .deliverables .section-title, .examples .section-title, .eligibility .section-title, .expertise h2 { font-size: 36px; }
+  .hero h1 { font-size: 64px; }
+  .solution__title strong { font-size: 48px; }
+  .reaction-card, .perception-card, .pricing-card { padding: 24px; }
+  .reaction-card__number { right: 24px; top: 24px; }
+  .reaction-card h3, .perception-card h3 { font-size: 22px; }
+  .consult-steps li { padding: 20px; }
+  .consult-steps strong { font-size: 18px; }
+  .consult-benefits { row-gap: 8px; }
+  .consult-benefits li:nth-child(3) { border-left: 0; }
+  .pricing-card__title { font-size: 22px; }
+  .pricing-card__price { font-size: 40px; }
+  .pricing-card__price small { font-size: 20px; }
+  .deliverables-grid { grid-template-columns: 1fr; gap: 40px; }
+  .book-showcase, .deliverables__copy { max-width: 640px; margin-inline: auto; }
+}
+@media (max-width: 600px) {
+  .section__inner { padding-block: 64px; gap: 24px; }
+  .reactions .section__inner, .perception .section__inner, .pricing .section__inner { gap: 24px; }
+  .section-title, .consult .section-title, .process .section-title, .problem .section-title, .deliverables .section-title, .examples .section-title, .eligibility .section-title, .expertise h2 { font-size: 28px; line-height: 1.45; }
+  .eyebrow, .perception .eyebrow, .process .eyebrow { font-size: 14px; }
+  .legal-note, .pricing .legal-note { font-size: 12px; line-height: 20px; }
+  .hero .section__inner { padding-top: 16px; padding-bottom: 64px; }
+  .site-header { min-height: 64px; padding-bottom: 16px; gap: 12px; }
+  .brand strong { font-size: clamp(14px, 4.1vw, 17px); line-height: 24px; letter-spacing: 0; }
+  .brand span { max-width: 168px; font-size: 11px; line-height: 16px; }
+  .consult-link--compact { min-height: 44px; padding: 12px; font-size: 12px; line-height: 20px; }
+  .hero__kicker { margin-top: 16px; font-size: 16px; line-height: 24px; }
+  .hero h1 { font-size: clamp(40px, 11.8vw, 48px); line-height: 1.2; }
+  .hero__sub { font-size: 17px; line-height: 28px; }
+  .hero .carousel { margin-top: 8px; }
+  .hero__message { margin-top: 8px; font-size: 17px; line-height: 1.7; }
+  .hero__difference { font-size: 1.08em; }
+  .carousel__viewport { height: 224px; }
+  .carousel__card { gap: 8px; padding-bottom: 12px; }
+  .carousel__card figcaption { font-size: 16px; line-height: 20px; }
+  .carousel--patent .carousel__viewport { height: 400px; }
+  .solution__intro { font-size: 20px; }
+  .solution__title strong { font-size: clamp(28px, 8vw, 40px); }
+  .solution__title > span { margin-top: 8px; font-size: 22px; }
+  .solution__caption { font-size: 20px; }
+  .reaction-grid, .pricing-grid { gap: 12px; }
+  .reaction-card { padding: 16px 12px; gap: 12px; border-radius: 12px; }
+  .reaction-card__icon { width: 24px; height: 24px; }
+  .reaction-card__number { right: 12px; top: 16px; font-size: 12px; }
+  .reaction-card h3 { font-size: clamp(14px, 3.9vw, 17px); line-height: 1.5; }
+  .reaction-card p { font-size: clamp(12px, 3.4vw, 14px); line-height: 1.6; }
+  .perception-grid { gap: 16px; }
+  .perception-card { padding: 24px; gap: 16px; }
+  .perception .perception-card__label { font-size: 15px; }
+  .perception-card__before { font-size: 16px; }
+  .perception-card h3 { font-size: 22px; }
+  .perception__conclusion { font-size: 16px; }
+  .perception__keyline em { font-size: 20px; }
+  .consult__intro { font-size: 18px; }
+  .consult-steps li { padding: 20px; gap: 20px; }
+  .consult-steps strong { font-size: 18px; }
+  .consult__no-idea { font-size: 18px; line-height: 28px; }
+  .consult-benefits li { padding: 8px; font-size: 13px; }
+  .consult__available { font-size: 14px; line-height: 24px; }
+  .consult-link:not(.consult-link--compact) { min-height: 72px; padding: 12px 24px; font-size: 20px; line-height: 28px; }
+  .consult-note { margin-top: -12px; font-size: 12px; }
+  .pricing__kicker { font-size: 15px; line-height: 24px; }
+  .pricing .section-title { font-size: 32px; }
+  .pricing-card { padding: 20px 12px; gap: 16px; border-radius: 12px; }
+  .pricing-card__label { font-size: 12px; line-height: 20px; }
+  .pricing-card__title { min-height: 48px; font-size: clamp(15px, 4.2vw, 18px); line-height: 24px; }
+  .pricing-card__price { margin-top: 0; font-size: clamp(24px, 7vw, 32px); }
+  .pricing-card__price small { font-size: clamp(12px, 3.6vw, 16px); }
+  .pricing-card__footer { margin-top: auto; padding-top: 16px; }
+  .pricing-card__total { font-size: 13px; line-height: 20px; }
+  .pricing__description { font-size: 16px; }
+  .expertise__icon { width: 40px; height: 40px; }
+  .expertise p { font-size: 17px; line-height: 28px; }
+  .expertise .expertise__closing { font-size: 24px; line-height: 36px; }
+  .process-list { gap: 16px; }
+  .process-list::before { left: 40px; }
+  .process-step { padding: 20px; grid-template-columns: 40px minmax(0, 1fr); gap: 16px; border-radius: 12px; }
+  .process-number { width: 40px; height: 40px; font-size: 13px; }
+  .process-step__body h3 { margin-bottom: 0; }
+  .process-step h3 { font-size: 18px; line-height: 28px; }
+  .process-examples { font-size: 15px; }
+  .process-examples small { font-size: 12px; }
+  .process-chain, .process-key { font-size: 17px; line-height: 28px; }
+  .patent-examples { margin-top: 0; padding-left: 16px; font-size: 14px; line-height: 24px; }
+  .process-note { margin-top: 0; font-size: 12px; line-height: 20px; }
+  .problem .section-title { font-size: 26px; }
+  .problem__description { font-size: 17px; }
+  .problem__conclusion { padding: 24px 16px; }
+  .problem__conclusion p { font-size: 16px; }
+  .problem__conclusion strong { font-size: 20px; }
+  .deliverables-grid { gap: 32px; }
+  .deliverables__copy h3 { font-size: 22px; }
+  .deliverables__copy > p { font-size: 17px; }
+  .deliverables__uses li { font-size: 14px; }
+  .book-showcase__controls { gap: 8px; }
+  .book-showcase__controls button { padding-inline: 12px; font-size: 13px; }
+  .examples__description { font-size: 18px; }
+  .examples-grid { gap: 12px; }
+  .example-card { padding: 4px 4px 12px; gap: 12px; border-radius: 12px; }
+  .example-card figcaption { font-size: 12px; line-height: 20px; }
+  .results__title > span:first-child { font-size: 15px; line-height: 24px; }
+  .results__title > span { font-size: clamp(19px, 5.5vw, 24px); }
+  .results__title em { font-size: clamp(28px, 8vw, 36px); white-space: normal; }
+  .results__note { margin-top: -12px; font-size: 12px; text-align: left; }
+  .results blockquote { font-size: 22px; }
+  .results__closing { font-size: 18px; line-height: 28px; }
+  .results-chips li { padding: 0 8px; font-size: 13px; }
+  .eligibility-types { gap: 12px; }
+  .eligibility-types li { padding: 16px 12px; min-height: 64px; gap: 12px; }
+  .eligibility-types strong { font-size: 17px; }
+  .value-card { padding: 24px 16px; }
+  .value-card h3 { font-size: 22px; }
+  .value-card p { font-size: 16px; }
+  .final-cta .section-title { font-size: clamp(23px, 6.6vw, 28px); }
+  .final-cta__description { font-size: 18px; }
+  .site-footer { padding-block: 40px; }
+  .footer-logo { width: 240px; height: 48px; }
+  .footer-offices { gap: 24px; }
+}
+@media (max-width: 359px) {
+  .site-header { gap: 8px; }
+  .brand span { max-width: 136px; }
+  .consult-link--compact { padding-inline: 8px; font-size: 11px; }
+  .consult__intro { font-size: 17px; }
+  .perception-card { padding: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .book-showcase__turning { display: none; }
+}
