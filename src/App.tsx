@@ -10,12 +10,13 @@ import { Process } from './components/Process';
 import { SafeImage } from './components/SafeImage';
 import { Section } from './components/Section';
 import { figmaAsset, heroImages, media, patentImages } from './data';
+import lawmunLogo from './assets/lawmun-original.png?inline';
 
 const reactions = [
-  { icon: 'Bulb', title: <>“<em>특허출원 기술</em>이라고?”</>, body: <>제품의 차별화 요소를<br />{' '}<em>실제 특허출원 내용으로 구체화</em>했다는 점을<br />{' '}보여줄 수 있습니다.</> },
-  { icon: 'PatentDocument', title: <>“제품 하나에 이런 <em>특허까지 출원</em>했다고?”</>, body: <>제품의 <em>성분, 배합, 작용원리</em> 등을<br />{' '}기술적인 관점에서 보여줄 수 있습니다.</> },
-  { icon: 'Search', title: <>“제품의 특징을 <em>특허 관점에서 구조화</em>하여 설명할 수 있습니다.”</>, body: null },
-  { icon: 'Cart', title: <>“단순히 과대광고만 하는<br />{' '}제품은 아닌 것 같은데”</>, body: <>단순한 광고 문구를 넘어,<br />{' '}제품의 구매 이유를 <em>기술적인 관점</em>에서<br />{' '}보여줄 수 있습니다.</> },
+  { icon: 'Bulb', title: <>“<em>특허출원 기술</em>이라고?”</>, body: <>제품의 차별점을 <em>실제 특허출원 내용으로 구체화</em>합니다.</> },
+  { icon: 'PatentDocument', title: <>“이 제품에 <em>특허까지 출원</em>했다고?”</>, body: <><em>성분·배합·작용원리</em>를 기술적 관점으로 설명합니다.</> },
+  { icon: 'Search', title: <>“제품의 특징을 <em>특허 관점으로</em> 설명합니다.”</>, body: null },
+  { icon: 'Cart', title: <>“광고만 하는 제품은 아니네”</>, body: <>제품의 구매 이유를 <em>기술적 관점</em>으로 보여줍니다.</> },
 ];
 
 export default function App() {
@@ -151,7 +152,7 @@ export default function App() {
       </Section>
     </main>
     <footer className="site-footer" data-figma-node="1:177"><div className="container">
-      <div className="footer-logo"><SafeImage src={media.logo} alt="로문특허법률사무소 Lawmun IP Law Firm" loading="lazy" /></div>
+      <div className="footer-logo"><SafeImage src={lawmunLogo} alt="로문특허법률사무소 Lawmun IP Law Firm" loading="lazy" /></div>
       <p className="footer-representatives">대표 변리사 : 이원택, 김성현</p>
       <div className="footer-offices"><address><strong>로문특허법률사무소 선릉사무소</strong><span>사업자등록번호 : 797-43-01231</span><span>주소 : 서울특별시 강남구 테헤란로 52길6, 1408호</span></address><address><strong>로문특허법률사무소 역삼사무소</strong><span>사업자등록번호 : 788-63-00861</span><span>주소 : 서울특별시 강남구 논현로 75길15, 501호</span></address></div>
       <p className="footer-email">이메일 : <a href="mailto:marketing@lawmun.com">marketing@lawmun.com</a></p>

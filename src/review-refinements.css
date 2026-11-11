@@ -90,6 +90,14 @@
 .results__closing { font-size: 22px; font-weight: 750; color: #374b6b; }
 .results blockquote em, .results__closing em { font-weight: 800; }
 
+/* A continuous black footer lets the original white Lawmun logo blend in. */
+.site-footer { background: #000; color: #b0b0b0; }
+.footer-offices strong { color: #f3f3f3; }
+.footer-email a { color: #e0e0e0; }
+.footer-email a:hover { color: #fff; }
+.footer-copyright { color: #999; border-color: #2b2b2b; }
+.site-footer a:focus-visible { outline-color: #fff; }
+
 @media (max-width: 1100px) {
   .site-header > .consult-link { display: none; }
   .trust-strip ul { gap: 24px; }
@@ -115,6 +123,13 @@
   .trust-strip > p { font-size: 16px; }
 }
 @media (max-width: 600px) {
+  /* Preserve the 2×2 comparison, with less vertical space and readable type. */
+  .reaction-grid { gap: 10px; }
+  .reaction-card { padding: 16px 14px; gap: 12px; border-radius: 22px; }
+  .reaction-card__icon { width: 22px; height: 22px; padding: 7px; border-radius: 11px; }
+  .reaction-card__number { top: 16px; right: 14px; }
+  .reaction-card h3, .reaction-card:nth-child(3) h3 { font-size: 18px; line-height: 1.4; font-weight: 750; }
+  .reaction-card p { font-size: 13px; line-height: 1.6; color: #4c5b72; }
   .site-header { width: calc(100% - 32px); padding: 10px 12px; gap: 8px; }
   .brand-lockup__rich { gap: 4px; }
   .brand-lockup__wordmark { gap: 4px; }
@@ -155,6 +170,9 @@
   .results__closing { font-size: 18px; }
 }
 @media (max-width: 359px) {
+  .reaction-card { padding: 14px 12px; gap: 10px; }
+  .reaction-card__number { top: 14px; right: 12px; }
+  .reaction-card h3, .reaction-card:nth-child(3) h3 { font-size: 16px; }
   .site-header { padding-inline: 9px; gap: 4px; }
   .brand .brand-lockup__wordmark strong { font-size: 12.5px; }
   .brand-lockup__symbol { width: 12px; height: 18px; }
