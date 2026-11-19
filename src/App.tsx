@@ -31,7 +31,7 @@ export default function App() {
     <main id="main">
       <Section id="intro" theme="dark" className="hero" nodeId="1:3">
         <HeroIntro />
-        <div className="trust-strip" aria-label="리치마케팅 서비스 안내">
+        <div className="trust-strip" aria-label="로문특허법률사무소 IP 서비스 안내">
           <p>로문특허법률사무소가 직접 운영하는 IP 마케팅</p>
           <ul><li><span aria-hidden="true">✓</span> 전과정 변리사 직접 진행</li><li><span aria-hidden="true">✓</span> 코스메틱 · 건기식 맞춤 설계</li><li><span aria-hidden="true">✓</span> 광고 · 상세페이지 활용</li></ul>
         </div>
@@ -85,7 +85,7 @@ export default function App() {
           <h2 className="section-title"><em className="text-blue text-shimmer">IP 마케팅 소재</em><br /><span className="text-shimmer text-shimmer--silver">구축 패키지</span></h2>
           <Pricing />
           <p className="pricing__description"><span className="copy-line"><span className="keep-together">제품의 <em className="text-blue">차별화 요소</em>를</span> <span className="keep-together"><em className="text-blue">특허 포인트</em>로 발굴하고,</span></span><span className="copy-line"><span className="keep-together">브랜드에 활용할 수 있는</span> <span className="keep-together"><em className="text-blue">IP 마케팅 소재</em>로 완성합니다.</span></span></p>
-          <p className="legal-note">※ 본 서비스의 특허출원은 특허청을 통해 정식 출원 절차로 진행되며, 등록변리사가 직접 수행합니다.<br />RICH MARKETING(리치마케팅)은 로문특허법률사무소가 직접 운영하는 IP 서비스입니다.</p>
+          <p className="legal-note">※ 본 서비스의 특허출원은 특허청을 통해 정식 출원 절차로 진행되며, 등록변리사가 직접 수행합니다.<br />로문특허법률사무소가 운영하는 IP 서비스입니다.</p>
       </Section>
 
       <Section id="expertise" theme="dark" className="expertise" nodeId="13:2">

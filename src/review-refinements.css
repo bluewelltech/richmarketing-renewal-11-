@@ -1,7 +1,7 @@
 /* User's annotated PDF: clearer type, consultation panels and pricing.
    Keep the approved blue/navy/gold palette and compact mobile comparisons. */
 
-/* Paired branding: scalable Rich Marketing mark and the full-resolution Lawmun logo. */
+/* Service tagline and the full-resolution Lawmun logo. */
 .site-header {
   width: min(1200px, calc(100% - 64px));
   gap: 24px;
@@ -9,17 +9,7 @@
   background: #fff;
 }
 .brand { gap: 0; }
-.brand-lockup__rich { display: flex; flex-direction: column; gap: 5px; }
-.brand-lockup__wordmark { display: flex; align-items: center; gap: 6px; }
-.brand .brand-lockup__wordmark strong {
-  font-size: 23px;
-  line-height: 1.2;
-  font-weight: 800;
-  letter-spacing: -.045em;
-  white-space: nowrap;
-}
-.brand-lockup__symbol { display: block; width: 21px; height: 28px; flex: none; }
-.brand-lockup__tagline { font-size: 9.5px; line-height: 1.4; font-weight: 600; letter-spacing: .025em; color: #5875a3; white-space: nowrap; }
+.brand-lockup__tagline { font-size: 12px; line-height: 1.6; font-weight: 600; letter-spacing: 0; color: #5875a3; white-space: nowrap; }
 .brand-lockup__divider { width: 1px; height: 46px; background: #d9e2f1; margin-inline: 20px; }
 .brand-lockup__lawmun { width: 180px; height: auto; filter: invert(1); mix-blend-mode: multiply; }
 
@@ -107,7 +97,6 @@
 }
 @media (max-width: 900px) {
   .site-header { width: calc(100% - 40px); gap: 18px; }
-  .brand .brand-lockup__wordmark strong { font-size: 21px; }
   .brand-lockup__lawmun { width: 160px; }
   .brand-lockup__divider { margin-inline: 18px; }
   .hero-context h2 { font-size: 34px; }
@@ -131,11 +120,8 @@
   .reaction-card h3, .reaction-card:nth-child(3) h3 { font-size: 18px; line-height: 1.4; font-weight: 750; }
   .reaction-card p { font-size: 13px; line-height: 1.6; color: #4c5b72; }
   .site-header { width: calc(100% - 32px); padding: 10px 12px; gap: 8px; }
-  .brand-lockup__rich { gap: 4px; }
-  .brand-lockup__wordmark { gap: 4px; }
-  .brand .brand-lockup__wordmark strong { font-size: 14px; }
-  .brand-lockup__symbol { width: 14px; height: 20px; }
-  .brand-lockup__tagline { font-size: 7.2px; letter-spacing: 0; }
+  .brand-lockup__tagline { font-size: 10.5px; }
+  .brand-lockup__tagline > span { display: block; }
   .brand-lockup__divider { height: 36px; margin-inline: 10px; }
   .brand-lockup__lawmun { width: 106px; }
   .nav-toggle { width: 36px; height: 36px; padding: 8px; flex: none; }
@@ -174,9 +160,7 @@
   .reaction-card__number { top: 14px; right: 12px; }
   .reaction-card h3, .reaction-card:nth-child(3) h3 { font-size: 16px; }
   .site-header { padding-inline: 9px; gap: 4px; }
-  .brand .brand-lockup__wordmark strong { font-size: 12.5px; }
-  .brand-lockup__symbol { width: 12px; height: 18px; }
-  .brand-lockup__tagline { font-size: 6.3px; }
+  .brand-lockup__tagline { font-size: 10px; }
   .brand-lockup__divider { margin-inline: 8px; height: 30px; }
   .brand-lockup__lawmun { width: 91px; }
   .nav-toggle { width: 32px; height: 32px; padding: 6px; }

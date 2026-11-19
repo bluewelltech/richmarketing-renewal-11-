@@ -19,7 +19,7 @@ export function SiteHeader() {
     return () => { document.removeEventListener('pointerdown', closeOutside); document.removeEventListener('keydown', escape); };
   }, [open]);
   return <header className="site-header" ref={header}>
-    <a className="brand" href="#intro" aria-label="리치마케팅 처음으로" onClick={() => setOpen(false)}>
+    <a className="brand" href="#intro" aria-label="로문특허법률사무소 처음으로" onClick={() => setOpen(false)}>
       <BrandLockup />
     </a>
     <nav id="site-navigation" className={`site-nav ${open ? 'is-open' : ''}`} aria-label="주요 메뉴">
